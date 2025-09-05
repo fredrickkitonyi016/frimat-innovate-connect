@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -44,6 +47,10 @@ export default {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'
@@ -61,7 +68,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// FRIMAT Brand Colors
+				'navy-blue': 'hsl(var(--navy-blue))',
+				'steel-gray': 'hsl(var(--steel-gray))',
+				'sky-blue': 'hsl(var(--sky-blue))',
+				'emerald-green': 'hsl(var(--emerald-green))',
+				'light-gray': 'hsl(var(--light-gray))',
+				'pure-white': 'hsl(var(--pure-white))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

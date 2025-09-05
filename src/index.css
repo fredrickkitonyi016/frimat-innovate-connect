@@ -1,42 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* FRIMAT TECHNOLOGIES Design System - Professional Tech Corporate */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    /* FRIMAT Brand Colors */
+    --navy-blue: 210 92% 12%;        /* #0A192F - Primary brand */
+    --steel-gray: 215 25% 27%;       /* #334155 - Secondary neutral */
+    --sky-blue: 199 89% 48%;         /* #38BDF8 - Highlight/CTAs */
+    --emerald-green: 158 64% 52%;    /* #10B981 - Success/Secondary CTAs */
+    --light-gray: 210 20% 96%;       /* #F3F4F6 - Background sections */
+    --pure-white: 0 0% 100%;         /* #FFFFFF - Cards/text */
+    
+    /* Semantic Design System */
+    --background: var(--pure-white);
+    --foreground: var(--navy-blue);
+    
+    --card: var(--pure-white);
+    --card-foreground: var(--navy-blue);
+    
+    --popover: var(--pure-white);
+    --popover-foreground: var(--navy-blue);
+    
+    --primary: var(--navy-blue);
+    --primary-foreground: var(--pure-white);
+    
+    --secondary: var(--light-gray);
+    --secondary-foreground: var(--navy-blue);
+    
+    --muted: var(--light-gray);
+    --muted-foreground: var(--steel-gray);
+    
+    --accent: var(--sky-blue);
+    --accent-foreground: var(--pure-white);
+    
+    --success: var(--emerald-green);
+    --success-foreground: var(--pure-white);
+    
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --destructive-foreground: var(--pure-white);
+    
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: var(--sky-blue);
+    
+    /* Professional gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--navy-blue)), hsl(210 92% 8%));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--sky-blue)), hsl(var(--emerald-green)));
+    --gradient-overlay: linear-gradient(135deg, hsl(var(--navy-blue) / 0.9), hsl(var(--navy-blue) / 0.7));
+    
+    /* Professional shadows */
+    --shadow-card: 0 4px 6px -1px hsl(var(--navy-blue) / 0.1), 0 2px 4px -1px hsl(var(--navy-blue) / 0.06);
+    --shadow-card-hover: 0 10px 15px -3px hsl(var(--sky-blue) / 0.1), 0 4px 6px -2px hsl(var(--sky-blue) / 0.05);
+    --shadow-glow: 0 0 20px hsl(var(--sky-blue) / 0.3);
+    --shadow-success-glow: 0 0 20px hsl(var(--emerald-green) / 0.3);
+    
+    /* Animation timings */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +127,131 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Professional button variants */
+  .btn-primary {
+    @apply bg-accent text-accent-foreground hover:bg-success hover:shadow-glow font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-3 rounded-lg transition-all duration-300 backdrop-blur-sm hover:shadow-glow;
+  }
+  
+  .btn-hero {
+    @apply bg-accent text-accent-foreground hover:bg-success hover:shadow-success-glow font-bold px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 text-lg;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground font-semibold px-8 py-3 rounded-lg transition-all duration-300;
+  }
+
+  /* Card variants */
+  .card-elevated {
+    @apply bg-card text-card-foreground rounded-xl p-6 transition-all duration-300 hover:shadow-card-hover transform hover:-translate-y-1;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .card-portfolio {
+    @apply bg-card text-card-foreground rounded-xl overflow-hidden transition-all duration-300 hover:shadow-card-hover transform hover:-translate-y-2 hover:border-accent border-2 border-transparent;
+  }
+
+  /* Section backgrounds */
+  .section-light {
+    @apply bg-secondary;
+  }
+  
+  .section-dark {
+    @apply bg-primary text-primary-foreground;
+  }
+  
+  .section-hero {
+    background: var(--gradient-hero);
+    position: relative;
+  }
+  
+  .section-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-overlay);
+    z-index: 1;
+  }
+  
+  .section-hero > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Navigation styles */
+  .nav-solid {
+    @apply bg-primary/95 backdrop-blur-md border-b border-white/10;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .nav-transparent {
+    @apply bg-transparent;
+  }
+
+  /* Animations */
+  .animate-fade-in {
+    @apply opacity-0 translate-y-6;
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in-delay {
+    @apply opacity-0 translate-y-6;
+    animation: fadeIn 0.6s ease-out 0.3s forwards;
+  }
+  
+  .animate-slide-up {
+    @apply opacity-0 translate-y-12;
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .hover-glow {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .success-glow:hover {
+    box-shadow: var(--shadow-success-glow);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
