@@ -139,24 +139,24 @@
 @layer components {
   /* Professional button variants */
   .btn-primary {
-    @apply bg-accent text-accent-foreground hover:bg-success hover:shadow-glow font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105;
+    @apply bg-accent text-accent-foreground hover:bg-success hover:shadow-glow font-semibold px-6 py-3 sm:px-8 sm:py-3 rounded-lg transition-all duration-300 transform hover:scale-105 text-sm sm:text-base;
   }
   
   .btn-secondary {
-    @apply bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-3 rounded-lg transition-all duration-300 backdrop-blur-sm hover:shadow-glow;
+    @apply bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-6 py-3 sm:px-8 sm:py-3 rounded-lg transition-all duration-300 backdrop-blur-sm hover:shadow-glow text-sm sm:text-base;
   }
   
   .btn-hero {
-    @apply bg-accent text-accent-foreground hover:bg-success hover:shadow-success-glow font-bold px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 text-lg;
+    @apply bg-accent text-accent-foreground hover:bg-success hover:shadow-success-glow font-bold px-8 py-3 sm:px-10 sm:py-4 rounded-xl transition-all duration-300 transform hover:scale-105 text-base sm:text-lg;
   }
   
   .btn-ghost {
-    @apply bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground font-semibold px-8 py-3 rounded-lg transition-all duration-300;
+    @apply bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded-lg transition-all duration-300 text-sm sm:text-base;
   }
 
   /* Card variants */
   .card-elevated {
-    @apply bg-card text-card-foreground rounded-xl p-6 transition-all duration-300 hover:shadow-card-hover transform hover:-translate-y-1;
+    @apply bg-card text-card-foreground rounded-xl p-4 sm:p-6 transition-all duration-300 hover:shadow-card-hover transform hover:-translate-y-1;
     box-shadow: var(--shadow-card);
   }
   

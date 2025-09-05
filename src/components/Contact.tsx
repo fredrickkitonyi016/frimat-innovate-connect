@@ -47,19 +47,19 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6 leading-tight">
             Get In Touch
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
             Ready to transform your business with technology? Let's discuss your project and explore how we can help you achieve your goals.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
           {/* Contact Form */}
           <div className="card-elevated">
             <h3 className="text-2xl font-bold text-primary mb-6">
@@ -67,9 +67,9 @@ const Contact = () => {
             </h3>
             
             <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-primary mb-2">
+                  <label htmlFor="firstName" className="block text-xs sm:text-sm font-medium text-primary mb-2">
                     First Name *
                   </label>
                   <input
@@ -77,12 +77,12 @@ const Contact = () => {
                     id="firstName"
                     name="firstName"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent bg-background"
+                    className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent bg-background text-sm sm:text-base"
                     placeholder="John"
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-primary mb-2">
+                  <label htmlFor="lastName" className="block text-xs sm:text-sm font-medium text-primary mb-2">
                     Last Name *
                   </label>
                   <input
@@ -90,7 +90,7 @@ const Contact = () => {
                     id="lastName"
                     name="lastName"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent bg-background"
+                    className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent bg-background text-sm sm:text-base"
                     placeholder="Doe"
                   />
                 </div>
