@@ -8,56 +8,56 @@
 
 @layer base {
   :root {
-    /* FRIMAT Brand Colors */
-    --navy-blue: 210 92% 12%;        /* #0A192F - Primary brand */
-    --steel-gray: 215 25% 27%;       /* #334155 - Secondary neutral */
-    --sky-blue: 199 89% 48%;         /* #38BDF8 - Highlight/CTAs */
-    --emerald-green: 158 64% 52%;    /* #10B981 - Success/Secondary CTAs */
-    --light-gray: 210 20% 96%;       /* #F3F4F6 - Background sections */
-    --pure-white: 0 0% 100%;         /* #FFFFFF - Cards/text */
+    /* FRIMAT Professional Green Color Palette */
+    --primary-green: 120 61% 21%;        /* #14532D - Deep Forest Green */
+    --secondary-green: 142 71% 37%;      /* #16A34A - Emerald */
+    --accent-green: 142 71% 45%;         /* #22C55E - Bright Green */
+    --neutral-gray: 220 13% 28%;         /* #374151 - Dark Gray */
+    --light-gray: 220 14% 96%;           /* #F3F4F6 - Light backgrounds */
+    --pure-white: 0 0% 100%;             /* #FFFFFF - White */
     
     /* Semantic Design System */
     --background: var(--pure-white);
-    --foreground: var(--navy-blue);
+    --foreground: var(--primary-green);
     
     --card: var(--pure-white);
-    --card-foreground: var(--navy-blue);
+    --card-foreground: var(--primary-green);
     
     --popover: var(--pure-white);
-    --popover-foreground: var(--navy-blue);
+    --popover-foreground: var(--primary-green);
     
-    --primary: var(--navy-blue);
+    --primary: var(--primary-green);
     --primary-foreground: var(--pure-white);
     
     --secondary: var(--light-gray);
-    --secondary-foreground: var(--navy-blue);
+    --secondary-foreground: var(--primary-green);
     
     --muted: var(--light-gray);
-    --muted-foreground: var(--steel-gray);
+    --muted-foreground: var(--neutral-gray);
     
-    --accent: var(--sky-blue);
+    --accent: var(--secondary-green);
     --accent-foreground: var(--pure-white);
     
-    --success: var(--emerald-green);
+    --success: var(--accent-green);
     --success-foreground: var(--pure-white);
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: var(--pure-white);
     
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: var(--sky-blue);
+    --border: 220 14% 90%;
+    --input: 220 14% 90%;
+    --ring: var(--secondary-green);
     
-    /* Professional gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--navy-blue)), hsl(210 92% 8%));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--sky-blue)), hsl(var(--emerald-green)));
-    --gradient-overlay: linear-gradient(135deg, hsl(var(--navy-blue) / 0.9), hsl(var(--navy-blue) / 0.7));
+    /* Professional green gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-green)), hsl(120 61% 15%));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--secondary-green)), hsl(var(--accent-green)));
+    --gradient-overlay: linear-gradient(135deg, hsl(var(--primary-green) / 0.9), hsl(var(--primary-green) / 0.7));
     
-    /* Professional shadows */
-    --shadow-card: 0 4px 6px -1px hsl(var(--navy-blue) / 0.1), 0 2px 4px -1px hsl(var(--navy-blue) / 0.06);
-    --shadow-card-hover: 0 10px 15px -3px hsl(var(--sky-blue) / 0.1), 0 4px 6px -2px hsl(var(--sky-blue) / 0.05);
-    --shadow-glow: 0 0 20px hsl(var(--sky-blue) / 0.3);
-    --shadow-success-glow: 0 0 20px hsl(var(--emerald-green) / 0.3);
+    /* Professional shadows with green theme */
+    --shadow-card: 0 4px 6px -1px hsl(var(--primary-green) / 0.1), 0 2px 4px -1px hsl(var(--primary-green) / 0.06);
+    --shadow-card-hover: 0 10px 15px -3px hsl(var(--secondary-green) / 0.1), 0 4px 6px -2px hsl(var(--secondary-green) / 0.05);
+    --shadow-glow: 0 0 20px hsl(var(--secondary-green) / 0.3);
+    --shadow-success-glow: 0 0 20px hsl(var(--accent-green) / 0.3);
     
     /* Animation timings */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

@@ -69,11 +69,11 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// FRIMAT Brand Colors
-				'navy-blue': 'hsl(var(--navy-blue))',
-				'steel-gray': 'hsl(var(--steel-gray))',
-				'sky-blue': 'hsl(var(--sky-blue))',
-				'emerald-green': 'hsl(var(--emerald-green))',
+				// FRIMAT Professional Green Brand Colors
+				'primary-green': 'hsl(var(--primary-green))',
+				'secondary-green': 'hsl(var(--secondary-green))',
+				'accent-green': 'hsl(var(--accent-green))',
+				'neutral-gray': 'hsl(var(--neutral-gray))',
 				'light-gray': 'hsl(var(--light-gray))',
 				'pure-white': 'hsl(var(--pure-white))'
 			},
