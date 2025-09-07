@@ -1,4 +1,5 @@
 import heroBackground from '@/assets/hero-background.jpg';
+import AnimatedCounter from './AnimatedCounter';
 
 const Hero = () => {
   return (
@@ -39,18 +40,24 @@ const Hero = () => {
             </button>
           </div>
           
-          {/* Stats */}
+          {/* Animated Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 animate-slide-up px-4 sm:px-0">
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-2">100+</div>
+            <div className="text-center group">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-2 transition-all duration-300 group-hover:scale-110 group-hover:text-success">
+                <AnimatedCounter end={150} suffix="+" duration={2500} />
+              </div>
               <div className="text-sm sm:text-base text-white/80">Projects Delivered</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-success mb-2">50+</div>
+            <div className="text-center group">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-success mb-2 transition-all duration-300 group-hover:scale-110 group-hover:text-accent">
+                <AnimatedCounter end={75} suffix="+" duration={2000} />
+              </div>
               <div className="text-sm sm:text-base text-white/80">Happy Clients</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-2">24/7</div>
+            <div className="text-center group">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-2 transition-all duration-300 group-hover:scale-110">
+                <AnimatedCounter end={24} suffix="/7" duration={1500} />
+              </div>
               <div className="text-sm sm:text-base text-white/80">Support Available</div>
             </div>
           </div>
