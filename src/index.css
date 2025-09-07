@@ -231,6 +231,22 @@
   .success-glow:hover {
     box-shadow: var(--shadow-success-glow);
   }
+
+  /* Glassmorphism Button */
+  .glassmorphism-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .glassmorphism-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+    transform: translateY(-2px);
+  }
 }
 
 @keyframes fadeIn {

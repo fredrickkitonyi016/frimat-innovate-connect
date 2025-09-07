@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Home, Info, Settings, ShoppingBag, Briefcase, PenTool, Phone } from 'lucide-react';
+import SignUpForm from './SignUpForm';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -69,6 +70,9 @@ const Navbar = () => {
                   <span>{label}</span>
                 </button>
               ))}
+              
+              {/* Glassmorphism Sign Up Button */}
+              <SignUpForm />
             </div>
 
             {/* Mobile Menu Button */}
