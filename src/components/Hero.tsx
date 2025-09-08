@@ -32,10 +32,16 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-slide-up px-4 sm:px-0">
-            <button className="btn-hero w-full sm:w-auto">
+            <button 
+              className="btn-hero w-full sm:w-auto"
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Get Started
             </button>
-            <button className="btn-secondary w-full sm:w-auto">
+            <button 
+              className="btn-secondary w-full sm:w-auto"
+              onClick={() => (document.querySelector('.signup-btn') as HTMLElement)?.click()}
+            >
               Sign Up
             </button>
           </div>

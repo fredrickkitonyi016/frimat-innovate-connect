@@ -108,7 +108,22 @@ const Services = () => {
                 ))}
               </ul>
               
-              <button className="btn-ghost mt-4 sm:mt-6 w-full text-xs sm:text-sm transform transition-all duration-300 hover:scale-105 hover:bg-accent hover:text-white">
+              <button 
+                className="btn-ghost mt-4 sm:mt-6 w-full text-xs sm:text-sm transform transition-all duration-300 hover:scale-105 hover:bg-accent hover:text-white"
+                onClick={() => {
+                  const serviceRoutes = [
+                    '/services/custom-software-development',
+                    '/services/mobile-app-development', 
+                    '/services/cloud-solutions',
+                    '/services/cybersecurity',
+                    '/services/data-analytics',
+                    '/services/ai-machine-learning',
+                    '/services/digital-transformation',
+                    '/services/it-consulting'
+                  ];
+                  window.location.href = serviceRoutes[index];
+                }}
+              >
                 Learn More
               </button>
             </div>
@@ -123,7 +138,10 @@ const Services = () => {
           <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
             Let's discuss how we can help transform your business with technology.
           </p>
-          <button className="btn-primary w-full sm:w-auto">
+          <button 
+            className="btn-primary w-full sm:w-auto"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Get Free Consultation
           </button>
         </div>
