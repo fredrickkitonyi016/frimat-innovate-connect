@@ -145,44 +145,95 @@ const SignUpForm = () => {
     switch (step) {
       case 1:
         return (
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-foreground">Personal Information</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <Label htmlFor="firstName">First Name *</Label>
-                <Input id="firstName" value={formData.firstName} onChange={(e) => handleInputChange('firstName', e.target.value)} required />
+          <div className="space-y-6">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold text-primary mb-2">Personal Information</h3>
+              <div className="w-16 h-1 bg-gradient-to-r from-accent to-primary mx-auto rounded-full"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <Label htmlFor="firstName" className="text-primary font-semibold">First Name *</Label>
+                <Input 
+                  id="firstName" 
+                  value={formData.firstName} 
+                  onChange={(e) => handleInputChange('firstName', e.target.value)} 
+                  className="h-12 border-2 border-border/50 rounded-xl bg-background/50 backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30"
+                  placeholder="Enter your first name"
+                  required 
+                />
               </div>
-              <div>
-                <Label htmlFor="middleName">Middle Name</Label>
-                <Input id="middleName" value={formData.middleName} onChange={(e) => handleInputChange('middleName', e.target.value)} />
+              <div className="space-y-2">
+                <Label htmlFor="middleName" className="text-primary font-semibold">Middle Name</Label>
+                <Input 
+                  id="middleName" 
+                  value={formData.middleName} 
+                  onChange={(e) => handleInputChange('middleName', e.target.value)} 
+                  className="h-12 border-2 border-border/50 rounded-xl bg-background/50 backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30"
+                  placeholder="Enter your middle name"
+                />
               </div>
-              <div>
-                <Label htmlFor="lastName">Last Name *</Label>
-                <Input id="lastName" value={formData.lastName} onChange={(e) => handleInputChange('lastName', e.target.value)} required />
+              <div className="space-y-2">
+                <Label htmlFor="lastName" className="text-primary font-semibold">Last Name *</Label>
+                <Input 
+                  id="lastName" 
+                  value={formData.lastName} 
+                  onChange={(e) => handleInputChange('lastName', e.target.value)} 
+                  className="h-12 border-2 border-border/50 rounded-xl bg-background/50 backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30"
+                  placeholder="Enter your last name"
+                  required 
+                />
               </div>
-              <div>
-                <Label htmlFor="email">Email Address *</Label>
-                <Input id="email" type="email" value={formData.email} onChange={(e) => handleInputChange('email', e.target.value)} required />
+              <div className="space-y-2">
+                <Label htmlFor="email" className="text-primary font-semibold">Email Address *</Label>
+                <Input 
+                  id="email" 
+                  type="email" 
+                  value={formData.email} 
+                  onChange={(e) => handleInputChange('email', e.target.value)} 
+                  className="h-12 border-2 border-border/50 rounded-xl bg-background/50 backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30"
+                  placeholder="your.email@example.com"
+                  required 
+                />
               </div>
-              <div>
-                <Label htmlFor="phoneNumber">Phone Number *</Label>
-                <Input id="phoneNumber" value={formData.phoneNumber} onChange={(e) => handleInputChange('phoneNumber', e.target.value)} required />
+              <div className="space-y-2">
+                <Label htmlFor="phoneNumber" className="text-primary font-semibold">Phone Number *</Label>
+                <Input 
+                  id="phoneNumber" 
+                  value={formData.phoneNumber} 
+                  onChange={(e) => handleInputChange('phoneNumber', e.target.value)} 
+                  className="h-12 border-2 border-border/50 rounded-xl bg-background/50 backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30"
+                  placeholder="+1 (555) 123-4567"
+                  required 
+                />
               </div>
-              <div>
-                <Label htmlFor="alternatePhone">Alternate Phone</Label>
-                <Input id="alternatePhone" value={formData.alternatePhone} onChange={(e) => handleInputChange('alternatePhone', e.target.value)} />
+              <div className="space-y-2">
+                <Label htmlFor="alternatePhone" className="text-primary font-semibold">Alternate Phone</Label>
+                <Input 
+                  id="alternatePhone" 
+                  value={formData.alternatePhone} 
+                  onChange={(e) => handleInputChange('alternatePhone', e.target.value)} 
+                  className="h-12 border-2 border-border/50 rounded-xl bg-background/50 backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30"
+                  placeholder="Alternate phone number"
+                />
               </div>
-              <div>
-                <Label htmlFor="dateOfBirth">Date of Birth *</Label>
-                <Input id="dateOfBirth" type="date" value={formData.dateOfBirth} onChange={(e) => handleInputChange('dateOfBirth', e.target.value)} required />
+              <div className="space-y-2">
+                <Label htmlFor="dateOfBirth" className="text-primary font-semibold">Date of Birth *</Label>
+                <Input 
+                  id="dateOfBirth" 
+                  type="date" 
+                  value={formData.dateOfBirth} 
+                  onChange={(e) => handleInputChange('dateOfBirth', e.target.value)} 
+                  className="h-12 border-2 border-border/50 rounded-xl bg-background/50 backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30"
+                  required 
+                />
               </div>
-              <div>
-                <Label htmlFor="gender">Gender *</Label>
+              <div className="space-y-2">
+                <Label htmlFor="gender" className="text-primary font-semibold">Gender *</Label>
                 <Select value={formData.gender} onValueChange={(value) => handleInputChange('gender', value)}>
-                  <SelectTrigger>
+                  <SelectTrigger className="h-12 border-2 border-border/50 rounded-xl bg-background backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30">
                     <SelectValue placeholder="Select gender" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="bg-background border-2 border-border/50 rounded-xl shadow-lg z-50">
                     <SelectItem value="male">Male</SelectItem>
                     <SelectItem value="female">Female</SelectItem>
                     <SelectItem value="other">Other</SelectItem>
@@ -190,9 +241,16 @@ const SignUpForm = () => {
                   </SelectContent>
                 </Select>
               </div>
-              <div>
-                <Label htmlFor="nationality">Nationality *</Label>
-                <Input id="nationality" value={formData.nationality} onChange={(e) => handleInputChange('nationality', e.target.value)} required />
+              <div className="space-y-2 md:col-span-2">
+                <Label htmlFor="nationality" className="text-primary font-semibold">Nationality *</Label>
+                <Input 
+                  id="nationality" 
+                  value={formData.nationality} 
+                  onChange={(e) => handleInputChange('nationality', e.target.value)} 
+                  className="h-12 border-2 border-border/50 rounded-xl bg-background/50 backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30"
+                  placeholder="Enter your nationality"
+                  required 
+                />
               </div>
             </div>
           </div>
@@ -651,28 +709,31 @@ const SignUpForm = () => {
       <DialogTrigger asChild>
         <Button 
           variant="outline" 
-          className="glassmorphism-button text-white border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300"
+          className="glassmorphism-button text-white border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300 group transform hover:scale-105"
         >
-          <UserPlus className="mr-2 h-4 w-4" />
+          <UserPlus className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
           Sign Up
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-center">
-            FRIMAT TECHNOLOGIES - Comprehensive Application
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden bg-gradient-to-br from-background via-background/95 to-primary/5 border-2 border-border/50 backdrop-blur-sm">
+        <DialogHeader className="text-center border-b border-border/20 pb-6">
+          <DialogTitle className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            FRIMAT TECHNOLOGIES
           </DialogTitle>
-          <div className="flex justify-center mt-4">
+          <p className="text-muted-foreground mt-2">Comprehensive Application Process</p>
+          
+          {/* Enhanced Progress Indicator */}
+          <div className="flex justify-center mt-6">
             <div className="flex space-x-2">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((stepNumber) => (
                 <div
                   key={stepNumber}
-                  className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium transition-colors ${
+                  className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 ${
                     step === stepNumber
-                      ? 'bg-primary text-primary-foreground'
+                      ? 'bg-accent text-white shadow-lg scale-110 ring-2 ring-accent/30'
                       : step > stepNumber
-                      ? 'bg-primary/20 text-primary'
-                      : 'bg-muted text-muted-foreground'
+                      ? 'bg-primary text-white shadow-md'
+                      : 'bg-border/30 text-muted-foreground hover:bg-border/50'
                   }`}
                 >
                   {stepNumber}
@@ -680,30 +741,53 @@ const SignUpForm = () => {
               ))}
             </div>
           </div>
-          <p className="text-center text-sm text-muted-foreground mt-2">
-            Step {step} of 9 - Complete all fields marked with *
-          </p>
+          <div className="mt-4">
+            <div className="w-full bg-border/20 rounded-full h-2">
+              <div 
+                className="bg-gradient-to-r from-accent to-primary h-2 rounded-full transition-all duration-500 ease-out"
+                style={{ width: `${(step / 9) * 100}%` }}
+              ></div>
+            </div>
+            <p className="text-sm text-muted-foreground mt-2">
+              Step {step} of 9 - {Math.round((step / 9) * 100)}% Complete
+            </p>
+          </div>
         </DialogHeader>
 
-        <div className="mt-6">
-          {renderStep()}
+        <div className="overflow-y-auto max-h-[60vh] px-2">
+          <div className="p-6">
+            {renderStep()}
+          </div>
         </div>
 
-        <div className="flex justify-between mt-8">
+        <div className="flex justify-between items-center pt-6 border-t border-border/20 bg-background/50 backdrop-blur-sm">
           <Button 
             variant="outline" 
             onClick={prevStep} 
             disabled={step === 1}
+            className="transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:hover:scale-100"
           >
             Previous
           </Button>
           
+          <div className="text-center">
+            <p className="text-xs text-muted-foreground">
+              Complete all fields marked with *
+            </p>
+          </div>
+          
           {step < 9 ? (
-            <Button onClick={nextStep}>
+            <Button 
+              onClick={nextStep}
+              className="btn-primary transform hover:scale-105 transition-all duration-300"
+            >
               Next Step
             </Button>
           ) : (
-            <Button onClick={handleSubmit}>
+            <Button 
+              onClick={handleSubmit}
+              className="btn-primary transform hover:scale-105 transition-all duration-300 bg-gradient-to-r from-accent to-primary"
+            >
               Submit Application
             </Button>
           )}

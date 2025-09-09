@@ -73,70 +73,96 @@ const Contact = () => {
 
             <form className={`card-elevated transform transition-all duration-1000 ${formInView ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
               <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label className="block text-primary font-medium mb-2">First Name</label>
+                <div className="space-y-2">
+                  <label className="block text-primary font-medium mb-2">First Name *</label>
                   <input 
                     type="text" 
-                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
-                    placeholder="John"
+                    className="w-full px-4 py-4 border-2 border-border/50 rounded-xl bg-background/50 backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30 placeholder:text-muted-foreground/60"
+                    placeholder="Enter your first name"
+                    required
                   />
                 </div>
-                <div>
-                  <label className="block text-primary font-medium mb-2">Last Name</label>
+                <div className="space-y-2">
+                  <label className="block text-primary font-medium mb-2">Last Name *</label>
                   <input 
                     type="text" 
-                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
-                    placeholder="Doe"
+                    className="w-full px-4 py-4 border-2 border-border/50 rounded-xl bg-background/50 backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30 placeholder:text-muted-foreground/60"
+                    placeholder="Enter your last name"
+                    required
                   />
                 </div>
               </div>
 
-              <div className="mb-6">
-                <label className="block text-primary font-medium mb-2">Email</label>
+              <div className="mb-6 space-y-2">
+                <label className="block text-primary font-medium mb-2">Email Address *</label>
                 <input 
                   type="email" 
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
-                  placeholder="john@example.com"
+                  className="w-full px-4 py-4 border-2 border-border/50 rounded-xl bg-background/50 backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30 placeholder:text-muted-foreground/60"
+                  placeholder="your.email@example.com"
+                  required
                 />
               </div>
 
-              <div className="mb-6">
-                <label className="block text-primary font-medium mb-2">Phone</label>
+              <div className="mb-6 space-y-2">
+                <label className="block text-primary font-medium mb-2">Phone Number</label>
                 <input 
                   type="tel" 
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                  className="w-full px-4 py-4 border-2 border-border/50 rounded-xl bg-background/50 backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30 placeholder:text-muted-foreground/60"
                   placeholder="+1 (555) 123-4567"
                 />
               </div>
 
-              <div className="mb-6">
+              <div className="mb-6 space-y-2">
                 <label className="block text-primary font-medium mb-2">Service Interest</label>
-                <select className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all">
-                  <option>Select a service</option>
-                  <option>Custom Software Development</option>
-                  <option>Mobile App Development</option>
-                  <option>Cloud Solutions</option>
-                  <option>Cybersecurity</option>
-                  <option>Data Analytics</option>
-                  <option>AI & Machine Learning</option>
-                  <option>Digital Transformation</option>
-                  <option>IT Consulting</option>
+                <select className="w-full px-4 py-4 border-2 border-border/50 rounded-xl bg-background backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30 cursor-pointer z-10">
+                  <option value="">Select a service</option>
+                  <option value="custom-software">Custom Software Development</option>
+                  <option value="mobile-app">Mobile App Development</option>
+                  <option value="cloud-solutions">Cloud Solutions</option>
+                  <option value="cybersecurity">Cybersecurity</option>
+                  <option value="data-analytics">Data Analytics</option>
+                  <option value="ai-ml">AI & Machine Learning</option>
+                  <option value="digital-transformation">Digital Transformation</option>
+                  <option value="it-consulting">IT Consulting</option>
                 </select>
               </div>
 
-              <div className="mb-6">
-                <label className="block text-primary font-medium mb-2">Message</label>
+              <div className="mb-8 space-y-2">
+                <label className="block text-primary font-medium mb-2">Project Details *</label>
                 <textarea 
-                  rows={5}
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none"
-                  placeholder="Tell us about your project..."
+                  rows={6}
+                  className="w-full px-4 py-4 border-2 border-border/50 rounded-xl bg-background/50 backdrop-blur-sm focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300 hover:border-accent/30 resize-none placeholder:text-muted-foreground/60"
+                  placeholder="Tell us about your project, timeline, budget, and any specific requirements..."
+                  required
                 ></textarea>
               </div>
 
-              <button type="submit" className="btn-primary w-full inline-flex items-center justify-center">
-                <Send className="w-4 h-4 mr-2" />
+              <div className="mb-6">
+                <div className="flex items-start space-x-3">
+                  <input 
+                    type="checkbox" 
+                    id="terms" 
+                    className="w-5 h-5 mt-1 rounded border-2 border-border/50 text-accent focus:ring-accent/50 transition-all duration-300"
+                    required
+                  />
+                  <label htmlFor="terms" className="text-sm text-muted-foreground leading-relaxed">
+                    I agree to the <a href="#" className="text-accent hover:text-accent/80 underline transition-colors">Terms of Service</a> and <a href="#" className="text-accent hover:text-accent/80 underline transition-colors">Privacy Policy</a>
+                  </label>
+                </div>
+              </div>
+
+              <button 
+                type="submit" 
+                className="btn-primary w-full inline-flex items-center justify-center py-4 text-lg font-semibold transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                <Send className="w-5 h-5 mr-3" />
                 Send Message
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               </button>
+
+              <p className="text-center text-sm text-muted-foreground mt-4">
+                We'll respond within 24 hours
+              </p>
             </form>
           </div>
         </div>
