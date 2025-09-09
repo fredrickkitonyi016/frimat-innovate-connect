@@ -1,5 +1,6 @@
 import { Code, Smartphone, Cloud, Shield, Database, Cpu, Globe, Headphones } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const { ref: servicesRef, isInView: servicesInView } = useScrollAnimation({ threshold: 0.1 });
@@ -108,24 +109,21 @@ const Services = () => {
                 ))}
               </ul>
               
-              <button 
-                className="btn-ghost mt-4 sm:mt-6 w-full text-xs sm:text-sm transform transition-all duration-300 hover:scale-105 hover:bg-accent hover:text-white"
-                onClick={() => {
-                  const serviceRoutes = [
-                    '/services/custom-software-development',
-                    '/services/mobile-app-development', 
-                    '/services/cloud-solutions',
-                    '/services/cybersecurity',
-                    '/services/data-analytics',
-                    '/services/ai-machine-learning',
-                    '/services/digital-transformation',
-                    '/services/it-consulting'
-                  ];
-                  window.location.href = serviceRoutes[index];
-                }}
+              <Link 
+                to={[
+                  '/services/custom-software-development',
+                  '/services/mobile-app-development', 
+                  '/services/cloud-solutions',
+                  '/services/cybersecurity',
+                  '/services/data-analytics',
+                  '/services/ai-machine-learning',
+                  '/services/digital-transformation',
+                  '/services/it-consulting'
+                ][index]}
+                className="btn-ghost mt-4 sm:mt-6 w-full text-xs sm:text-sm transform transition-all duration-300 hover:scale-105 hover:bg-accent hover:text-white inline-block text-center"
               >
                 Learn More
-              </button>
+              </Link>
             </div>
           ))}
         </div>
